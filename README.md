@@ -3,7 +3,12 @@ A node.js webserver that will sync Github to any other remote version control re
 
 The webserver will listen for incoming Github webhooks, fetch and get all, and then push everything to your remote repo, effectively creating a realtime sync between repos.
 
-A lot of this was pulled from [this very handy Digital Ocean guide](https://www.digitalocean.com/community/tutorials/how-to-use-node-js-and-github-webhooks-to-keep-remote-projects-in-sync), I only expounded on a few elements.
+Most of this was pulled from [this very handy Digital Ocean guide](https://www.digitalocean.com/community/tutorials/how-to-use-node-js-and-github-webhooks-to-keep-remote-projects-in-sync), I only expanded the funcationality of a few elements.
+
+## Prereqs
+* Some sort of cloud instance (I use an Ubuntu image on a free tier ec2 instance)
+* git & curl`sudo apt install git curl`
+* nodejs `curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash - && sudo apt install nodejs`
 
 ## Usage
 I run this on a nano ec2 instance as a systemd service. For example if you want to run the webserver as `user` on port `8080`, and your webserver is named `webhook.js` and in `user` home directory:
