@@ -48,7 +48,7 @@ git remote -v
 **should show fetch/push for "origin" and "sync" remotes**
 ```
 
-# Set up Branches
+### Set up Branches
 **first pull from github using the "sync" remote**
 ```git
 git pull sync
