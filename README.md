@@ -1,7 +1,9 @@
 # Github to Anywhere Sync
-A node.js webserver I put together that will sync Github to any other remote version control repo. This was initially created to sync Github to BitBucket.
+A node.js webserver that will sync Github to any other remote version control repo. This was initially created to sync Github to BitBucket.
 
 The webserver will listen for incoming Github webhooks, fetch and get all, and then push everything to your remote repo, effectively creating a realtime sync between repos.
+
+A lot of this was pulled from [this very handy Digital Ocean guide](https://www.digitalocean.com/community/tutorials/how-to-use-node-js-and-github-webhooks-to-keep-remote-projects-in-sync), I only expounded on a few elements.
 
 ## Usage
 I run this on a nano ec2 instance as a systemd service. For example if you want to run the webserver as `user` on port `8080`, and your webserver is named `webhook.js` and in `user` home directory:
